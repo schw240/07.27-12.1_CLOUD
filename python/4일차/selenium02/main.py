@@ -44,20 +44,14 @@ for nat in nation_list:
     print(nat.num, nat.nation, nat.capital, nat.population)
 
 #파일 쓰기
-f = open('c:/python/4일차/nat_list.txt', 'w', encoding='utf8')
+f = open('c:/07.27-12.1_CLOUD/python/4일차/nat_list.txt', 'w', encoding='utf8')
 for nat in nation_list:
-    line = '{0};{1};{2};{3}\n'.format(nat.num, nat.nation, nat.capital, nat.population)
+    line = nat.SaveLine()
     f.write(line)
 f.close()
 
 path = 'c:/python/4일차'
 os.startfile(path)
 
-#불러오기
-f = open('c:/python/4일차/nat_list.txt', 'r', encoding="utf8")
-for nat in nation_list:
-    line = 
-    f.readline()
-f.close()
 
 driver.quit()
