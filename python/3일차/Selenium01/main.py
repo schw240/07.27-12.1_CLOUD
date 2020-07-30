@@ -29,7 +29,7 @@ for tr in trs:
 
 driver.quit()
 
-f = open('c:/python/movielist.txt', 'w', encoding='utf8')
+f = open('c:/07.27-12.1_CLOUD/python/movielist.txt', 'w', encoding='utf8')
 for m in movies:
     f.write('{0}위: {1}\n'.format(m.rank, m.title))
 for m in movies:
