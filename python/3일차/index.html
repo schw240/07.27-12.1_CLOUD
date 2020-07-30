@@ -1,0 +1,134 @@
+<html>
+    <head><!--한글 깨지지 않게 인코딩-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Welcome Homepage.</title>
+        
+        <!--밑의 my- - style은 함수와 비슷한 기능-->
+        <style>
+            .my-div-stlye { 
+                background-color: yellowgreen; 
+                color: black; 
+                font-size: 36pt;
+                padding: 30px; 
+                margin: 50px; 
+                border: 3px solid Red;
+            }
+
+            .my-img-style{
+                border: 1px solid #aaaaaa;
+                margin: 5px;
+                padding: 5px;
+                background-color:#ffffff;
+                width: 900px; 
+                height: 300px;
+            }
+            
+            table {
+                width: 100%;
+                border: 1px solid #dddddd;
+                border-collapse: collaspe;
+            }
+
+            th, td {
+                border: 1px solid #dddddd;
+                padding: 10px;
+            }
+            
+            th {
+                background-color: #dddd99;
+            }
+        </style>
+    </head>
+    <body><!--콤보박스 -->
+        <h1 style="color: red">아이언맨 기념관</h1>
+        <h2>영화 리스트</h2>
+        <!--정렬되지않은 리스트-->
+        <input type="text" value="영화를 입력해주세요"></input>
+        <input type="button" value="검색"></input>
+        <select> <!--콤보박스 -->
+            <option>영화제목</option>
+            <option>아이언맨1</option>
+            <option>아이언맨2</option>
+            <option>아이언맨3</option>
+            <option>어밴져스1</option>  
+            <option>어밴져스2</option>  
+            <option>어밴져스3</option>  
+            <option>어밴져스4</option>  
+
+        </select>
+        <!--#패딩은 안쪽 간격 마진은 바깥쪽 간격 보더는 테두리 -->
+        <input type="checkbox"></input>
+        <div class="my-div-stlye">
+            아이언맨 이미지
+        </div>
+
+
+        <img class="my-img-style" src="images/prac1.png"></img>
+        <img class="my-img-style" src="images/prac2.png"></img>
+        <img class="my-img-style" src="images/prac3.png"></img>
+        <img class="my-img-style" src="images/prac4.png"></img>
+        <img class="my-img-style" src="images/prac5.png"></img>
+        <img class="my-img-style" src="images/prac6.png"></img>
+  
+        <!--tr은 행 td는 행의 1번째칸 2번째칸 등등-->
+        <h1>아이언맨 출연 영화 리스트</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>영화제목</th>
+                    <th>개봉날자</th>
+                    <th>주연</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>아이언맨1</td>
+                    <td>2008년</td>
+                    <td>토니 스타크</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>아이언맨2</td>
+                    <td>2010년</td>
+                    <td>토니 스타크</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>아이언맨3</td>
+                    <td>2013년</td>
+                    <td>토니 스타크</td>
+                </tr>
+                <tr>
+                    <td>4/td>
+                    <td>어밴져스1</td>
+                    <td>2012년</td>
+                    <td>토니 스타크</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>어밴져스2</td>
+                    <td>2015년</td>
+                    <td>토니 스타크</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>어밴져스3</td>
+                    <td>2018년</td>
+                    <td>토니 스타크</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>어밴져스4</td>
+                    <td>2019년</td>
+                    <td>토니 스타크</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="my-div-stlye">
+            <a href="https://namu.wiki/w/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8">아이언맨의 역사(클릭)</a>        
+        </div>
+    </body>
+</html>
