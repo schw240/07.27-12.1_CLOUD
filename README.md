@@ -42,6 +42,17 @@
 오전
 1.	야후 파이낸스 크롤링
 
+크롤링 시나리오
+1. get >> https://finance.yahoo.com/quote/MSFT/history?p=MSFT
+time.sleep(2)
+2. 날짜 클릭
+time.sleep(2)
+3. MAX 클릭
+time.sleep(2)
+4. APPLY 클릭
+time.sleep(2)
+5. Download 클릭
+
 오후
 1.	종합 프로그래밍 고도화
 
