@@ -25,7 +25,7 @@ while isExistsPage == True:
         if len(tds) == 1:
             continue
 
-        div = tds[1].find_element_by_xpath('.//div')
+        div = tds[1].find_element_by_xpath('.//div')   
         a = div.find_element_by_xpath('.//a')
         href = a.get_attribute('href')
         urls.append(href)
