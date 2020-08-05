@@ -83,5 +83,48 @@ time.sleep(2)
 오후
 1.	종합 프로그래밍 고도화
 
+### 8일차
+
+오전
+1.	어제 했던 것 복습 똑같은 것 다시 만들어보기
+
+
+1)	영화 테이블 생성 <PRIMARY KEY 필수>
+2)	스텝 테이블 생성 <PRIMARY KEY 필수>
+3)	캐스팅 테이블 생성 <영화 CODE< 스텝 CODE 필수>
+4)	C:/python/navermovie02
+5)	각 테이블에 대한 모델(클래스)설계
+6)	어댑터 역할 .py 각각 생성(ex: adp_movie.py)
+7)	어댑터에서 pymssql과 db정보 (ip, id, pw , db)준비
+8)	리스트 <class>를 반환(return)하는 각각의 조회(SELECT) 메서드 구현
+	Conn = 접속정보
+	Cursor = conn.cursor()
+	Cursor.execute(쿼리)
+	Row = cursor.fetchone() 결과 가장 사위 데이터 꺼내기
+	While fetchone() 반복
+9)	Main.py 생성 및 while 문 명령 추가
+	‘1’, ‘2’, ‘3’, 각각 조회해서 출력하는 기능
+	(데이터베이스 안에서 임시로 데이터 직접 추가해서 확인
+	출력할때 클래스 안에 포함된 메서드를 사용(예:show)
+10)	영화 , 스텝 코드 중복 체크 메서드 (반환 True/False)
+11)	Insert 메서드 구현
+	Main.py에 명령어 추가
+	어댑터py에 메서드 구현
+	Insert 호출 전에 중복 체크
+12)	Crawling_movie.py 생성 및 영화 크롤링 기능 구현
+	영화 정보 insert(중복체크 후)
+	Main.py에서 호출되도록 명령 추가
+13)	Crawling_casting.py생성 및 데이터 등록
+	영화 목록(DB에 있는 데이터)를 기반으로 영화배우 크롤링 시작
+	STAFF 중복 체크 및 INSERT
+	CASTING 중복 체크 및 INSERT
+	(스태프 및 캐스팅 정보의 중복유무를 한번에 체크하기 위한 아이디어 고민! 공통인 staff_code를 통해서 검사)
+14)	영화테이블에서 CASTING_COUNT 컬럼 추가
+	CASTING_COUNT(INT) 추가 (배우 전체 수)
+15)	영화 목록 html 저장
+16)	영화 목록 클릭 시 상세화면 html저장
+
+
+
 
 
