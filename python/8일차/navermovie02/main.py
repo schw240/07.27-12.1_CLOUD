@@ -5,6 +5,7 @@ from adp_staff import SearchStaff, ExistStaff, InsertStaff
 from crawling_movie import CrawlingMovie
 from crawling_staff import CrawlingStaff
 from casting_count import updateCastingCount
+from create_html import CreateHtml
 import time
 
 driver = webdriver.Chrome('C:/python/07.27-12.1_CLOUD/python/chromedriver.exe')
@@ -63,4 +64,6 @@ while command.upper() != 'EXIT':
         CrawlingStaff(driver)
     elif command == '9':
         updateCastingCount()
+    elif command == '10':
+        CreateHtml()
     
