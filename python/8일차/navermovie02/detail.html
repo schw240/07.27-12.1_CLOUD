@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            body {
+                padding: 30px;
+                background-color: #000000;
+                color: #ffffff;
+            }
+            .a-back{
+                color: #ffffff;
+            }
+            .div-back{
+                background-image: url('arrow-back.png');
+                background-position: 5px center;
+                background-repeat: no-repeat;
+                padding-left: 40px;
+                color: #cccccc;
+                font-size:22px;
+                background-position: 5px center;
+                background-repeat: no-repeat;
+                background-size: 28px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .img-poster {
+                width: 200px;
+            }
+            .header-title {
+                font-weight: normal;
+            }
+            .btn-play {
+                background-color: #ffffff;
+                border-radius: 5px;   
+                color: #000000;
+                font-size:20px;
+                padding: 6px;        
+                margin-top:10px;
+                font-weight: bold;  
+                padding-left: 40px;
+                width: 50px;
+                background-image: url('play.png');
+                background-position: 5px center;
+                background-repeat: no-repeat;
+                background-size: 28px;
+                cursor: pointer;
+            }
+            .btn-play:hover {
+                background-color: #dddddd; 
+            }
+        </style>
+    </head>
+    <body>
+        <a class="a-back" href="javascript:window.history.back();">
+            <div class="div-back">뒤로 가기</div>
+        </a>
+        <h1 class="header-title">@RENDER_TITLE</h1>
+        <img class="img-poster" src="@RENDER_IMG_SRC">
+        <div class="btn-play">재생</div>
+        <h2>출연진</h2>
+        <ul>
+            @RENDER_CASTING
+        </ul>
+    </body>
+</html>

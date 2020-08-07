@@ -1,27 +1,29 @@
-import pymssql
+from helper_connect import NewConnect
 from model_movie import Movie
 
-ip = 'localhost'
-id = 'sa'
-pw = '!mssql1234'
-db = 'NAVER_2'
+
+def GetMovies():
+    movieSource = list()
+    conn = NewConnect()
+    cursor = conn.cursor()    
+    query = '''SELECT M_CODE
+                    , M_TITLE
+                    , M_STORY
+                    , C_COUNT
+                    , IMG_SRC
+                 FROM MOVIE'''
+    cursor.execute(query)
+    row = cursor.fetchone()
 
 def ExistsMovie(_code):
-    conn = pymssql.connect(server=ip, user=id, password=pw, database=db)
+    conn = NewConnect()
     cursor = conn.cursor()
     query = 'SELECT CODE FROM MOVIE_LIST WHERE CODE = %s'
     cursor.execute(query, _code)
 
-    isExists = False
-    row = cursor.fetchone()
+    return cursor.fetchone() != None if True else False
 
-    while row:
-        isExists = True
-        break
-
-    return isExists
-
-def InsertMovie(_code, _title, _story, _genre, _rating, _run_time, _open_date, _casting_count):
+def InsertMovie(_code, _title, _story, _genre, _rating, _run_time, _open_date, _casting_count, _image):
 
     openDates = _open_date.split(',')
 
@@ -34,21 +36,21 @@ def InsertMovie(_code, _title, _story, _genre, _rating, _run_time, _open_date, _
     if len(_open_date) == 7:
         _open_date += '-01'
 
-    conn = pymssql.connect(server=ip, user=id, password=pw, database=db)
+    conn = NewConnect()
     cursor = conn.cursor()
 
     query = '''
-        INSERT MOVIE_LIST(CODE, TITLE, STORY, GENRE, RATING, RUN_TIME, OPEN_DATE, CASTING_COUNT)
-        VALUES(%s, %s, %s, %s, %s, %s, %s, %s)
+        INSERT MOVIE_LIST(CODE, TITLE, STORY, GENRE, RATING, RUN_TIME, OPEN_DATE, CASTING_COUNT, IMAGE)
+        VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s)
         '''    
-    cursor.execute(query, (_code, _title, _story, _genre, _rating, _run_time, _open_date, _casting_count))
+    cursor.execute(query, (_code, _title, _story, _genre, _rating, _run_time, _open_date, _casting_count, _image))
     conn.commit()
 
 
 
 
 def SearchMovie():
-    conn = pymssql.connect(server=ip, user=id, password=pw, database=db)
+    conn = NewConnect()
     cursor = conn.cursor()
     query = 'SELECT * FROM MOVIE_LIST'
     cursor.execute(query)

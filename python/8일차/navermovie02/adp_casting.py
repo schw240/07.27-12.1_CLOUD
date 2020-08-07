@@ -1,10 +1,22 @@
-import pymssql
+from helper_connect import NewConnect
 from model_casting import Casting
+
 
 ip = 'localhost'
 id = 'sa'
 pw = '!mssql1234'
 db = 'NAVER_2'
+
+# 영화코드별 캐스팅 전체 인원 카운트 반환 메서드
+def GetCastingCount(m_code):
+    conn = NewConnect()
+    cursor = conn.cursor()    
+    query = '''SELECT COUNT(M_CODE)
+                FROM CASTING
+                WHERE M_CODE = %s'''
+    cursor.execute(query, m_code)
+    return cursor.fetchone()[0]
+
 
 def ExistsCasting(_staff_code):
     conn = pymssql.connect(server=ip, user=id, password=pw, database=db)

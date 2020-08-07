@@ -40,6 +40,7 @@ def CrawlingMovie(driver):
 
             _code = movie_code
             _title = driver.find_element_by_xpath('//*[@id="content"]/div[1]/div[2]/div[1]/h3').text
+            _title = _title.replace('상영중', '').replace('\n', '')
             try: 
                 _story = driver.find_element_by_xpath('//*[@class="h_tx_story"]').text
             except:
@@ -58,7 +59,11 @@ def CrawlingMovie(driver):
                 _run_time = driver.find_element_by_xpath('//*[@id="content"]/div[1]/div[2]/div[1]/dl/dd[1]/p/span[2]').text
                 _genre = ''
                 _open_date = driver.find_element_by_xpath('//*[@id="content"]/div[1]/div[2]/div[1]/dl/dd[1]/p/span[3]').text
-            _casting_count = driver.find_elements_by_xpath('//*[@id="content"]/div[1]/div[4]/div[1]/div/div[2]/ul/li')
+            _casting_count_url = 'https://movie.naver.com/movie/bi/mi/detail.nhn?code={0}'
+            driver.get(movie_url.format(m_code))
+            _casting_count = len(driver.find_elements_by_xpath('//*[@class="lst_people"]/li'))
+            _image = driver.find_element_by_xpath('//*[@class="poster"]/a/img').get_attribute('src')
+            
 
-            InsertMovie(m_code, _title, _story, _genre, _rating, _run_time, _open_date, len(_casting_count))
+            InsertMovie(m_code, _title, _story, _genre, _rating, _run_time, _open_date, _casting_count, _image)
         page += 1

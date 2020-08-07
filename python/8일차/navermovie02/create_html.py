@@ -20,6 +20,9 @@ def CreateHtml():
             <style>
                 table{
                     border-collapse: collapse;
+
+
+                    
                 }
                 td, th {
                     border: 10px solid #cccccc;
