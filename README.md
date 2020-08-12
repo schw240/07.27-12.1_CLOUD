@@ -181,3 +181,6 @@ time.sleep(2)
 데이터분석 + 인공지능 예측 활용
 제안 ppt: [프레젠테이션1.pdf](https://github.com/schw240/07.27-12.1_CLOUD/files/5056425/1.pdf)
 
+### 13일차
+미니프로젝트 <카드데이터 활용한 새로운 카드 제안하기>
+EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/default.zip)
