@@ -184,3 +184,7 @@ time.sleep(2)
 ### 13일차
 미니프로젝트 <카드데이터 활용한 새로운 카드 제안하기>
 EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/default.zip)
+
+### 14일차
+발표 [final_2.pptx](https://github.com/schw240/07.27-12.1_CLOUD/files/5068143/final_2.pptx)
+
