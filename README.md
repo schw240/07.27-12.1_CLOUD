@@ -188,3 +188,9 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 ### 14일차
 발표 [final_2.pptx](https://github.com/schw240/07.27-12.1_CLOUD/files/5068143/final_2.pptx)
 
+### 15일차
+1) 크롤링한 데이터 분석 방법
+  : 자연어 분석 및 코드 실습
+ 
+2) AWS로 웹서버 구축하기
+  : 프로젝트를 AWS로 돌려보기
