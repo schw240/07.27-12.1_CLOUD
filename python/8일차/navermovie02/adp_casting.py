@@ -50,7 +50,7 @@ def SearchCasting():
     query = 'SELECT * FROM CASTING_LIST'
     cursor.execute(query)
 
-    casting_list = list()
+    casting_list = list(
     row = cursor.fetchone()
 
     while row:
