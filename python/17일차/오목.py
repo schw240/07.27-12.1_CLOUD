@@ -59,7 +59,10 @@ def do_p1(omok_board, a, b):
 def do_p2(omok_board, a, b):
     omok_board[a][b] = 'X'
     return omok_board
-
+    
+def show_board(omok_board, a,b):
+    for i in range(a):
+        print(omok_board[a][i])
 omok_board, a, b = create_board()
 
 while True:
