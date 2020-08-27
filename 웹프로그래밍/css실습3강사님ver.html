@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>레이아웃01</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            #container {
+                width: 600px;
+                margin: 0 auto;
+            }
+
+            #header {                
+                border: 1px solid black;
+                background-color: yellow;
+                margin-top: 20px;
+                height: 100px;
+                line-height: 100px;
+                font-weight: 600;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            #left, #center, #right {
+                float: left;
+                padding: 10px;
+                margin-top: 10px;
+                box-sizing: border-box;
+                border: 1px solid black;
+            }
+
+            #left, #right {
+                width: 20%;
+            }
+
+            #center {
+                margin: 10px;
+                width: calc(60% - 20px);
+            }
+
+            #center p {
+                font-size: 12px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            #fotter {
+                clear: both;
+                border: 1px solid black;
+                background-color: gray;
+                height: 50px;
+                line-height: 50px;
+                padding: 10px;
+            }
+        </style>
+	</head>
+	<body>
+        <div id="container">
+            <div id="header">
+                안녕하세요
+            </div>
+            <div id="left">
+                <h3>왼쪽</h3>
+            </div>
+            <div id="center">
+                <h3>본문</h3>
+                <p>
+                    So are you happy now
+                    Finally happy now are you
+                    뭐 그대로야 난
+                    다 잃어버린 것 같아
+                    모든 게 맘대로 왔다가 인사도 없이 떠나
+                    이대로는 무엇도 사랑하고 싶지 않아
+                    다 해질 대로 해져버린
+                    기억 속을여행해
+                    우리는 오렌지 태양 아래
+                    그림자 없이 함께 춤을 춰
+                    정해진 이별 따위는 없어
+                    아름다웠던 그 기억에서 만나
+                    Forever young
+                    우우우 우우우우 우우우 우우우우
+                    Forever we young
+                    우우우 우우우우
+                    이런 악몽이라면 영영 깨지 않을게
+                </p>
+            </div>
+            <div id="right">
+                <h3>오른쪽</h3>
+            </div>
+            <div id="fotter">Fotter</div>
+        </div>
+		
+	</body>
+</html>
