@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>실습3</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+            
+            body, html, p {
+                margin: 0;
+                padding: 0;               
+            }           
+
+            body {
+                background-image: url('images/background_big.jpg');
+                color: white;
+            }
+
+            #container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -450px;
+                margin-top: -200px;
+                width: 900px;
+                font-weight: 200;                
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+
+            #title, #banner {
+                text-align: center;              
+            }
+
+            #title {
+                font-style: italic;
+                font-size: 8px;
+                font-weight: 400;
+            }
+
+            #banner {
+                margin-top: 10px;
+                font-size: 23px;                
+                line-height: 23px;
+                font-weight: 800;
+            }
+
+            #time {
+                overflow: hidden;
+                margin: 40px auto 0px auto;
+                width: 400px;
+            }
+
+            #time > div {
+                float: left;
+                margin: 0 20px;
+            }
+
+            #time > div > div:nth-child(1) {
+                font-size: 30px;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            #time > div > div:nth-child(2) {
+                font-size: 12px;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            #images {
+                margin-top: 80px;
+                clear: both;
+                text-align: center;
+            }
+
+            #images img{
+                display: inline-box;
+                margin: 0 30px;
+                width: 90px;
+            }
+        </style>
+    </head>    
+    <body>
+        <div id="container">
+            <div id="title">
+                STAY TUNED
+            </div>
+            <div id="banner">
+                New Website<br/>
+                Lunching soon
+            </div>
+            <div id="time">
+                <div>
+                    <div>
+                        94
+                    </div>
+                    <div>
+                        Days
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        06
+                    </div>
+                    <div>
+                        Hours
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        24
+                    </div>
+                    <div>
+                        Minutes
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        07
+                    </div>
+                    <div>
+                        Seconds
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        32
+                    </div>
+                    <div>
+                        Weeks
+                    </div>
+                </div>   
+            </div>
+            <div id="images">
+                <img src="C:\07.27-12.1_CLOUD\웹프로그래밍\실습이미지\레이아웃_실습03\icon_1.png"/>
+                <img src="C:\07.27-12.1_CLOUD\웹프로그래밍\실습이미지\레이아웃_실습03\icon_2.png"/>
+                <img src="C:\07.27-12.1_CLOUD\웹프로그래밍\실습이미지\레이아웃_실습03\icon_3.png"/>
+                <img src="C:\07.27-12.1_CLOUD\웹프로그래밍\실습이미지\레이아웃_실습03\icon_4.png"/>
+                <img src="C:\07.27-12.1_CLOUD\웹프로그래밍\실습이미지\레이아웃_실습03\icon_5.png"/>
+            </div>
+        </div>
+    </body>
+</html>
