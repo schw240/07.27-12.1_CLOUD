@@ -227,7 +227,11 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 1) 웹프로그래밍 HTML
 
 2) 웹프로그래밍 CSS
+
 ### 22일차
 1) 웹프로그래밍 CSS
 
 2) Git
+
+### 23일차
+1) 웹프로그래밍 CSS 진짜 웹페이지처럼 꾸며보기
