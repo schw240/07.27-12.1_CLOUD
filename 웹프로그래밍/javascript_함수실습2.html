@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트 함수 실습2</title>
+        <script>
+            var rsp = function (a, b) {
+                if (a == "가위" && b == "보") {
+                    return '1플레이어가 승리했습니다.'
+                } else if (a == "가위" && b == "가위") {
+                    return '비겼습니다.'
+                } else if (a == "가위" && b == "바위") {
+                    return '2플레이어가 승리했습니다.'
+                } else if (a == "바위" && b == "가위") {
+                    return '1플레이어가 승리했습니다.'
+                } else if (a == "바위" && b == "바위") {
+                    return '비겼습니다.'
+                } else if (a == "바위" && b == "보") {
+                    return '2플레이어가 승리했습니다.'
+                } else if (a == "보" && b == "바위") {
+                    return '1플레이어가 승리했습니다.'
+                } else if (a == "보" && b == "보") {
+                    return '비겼습니다.'
+                } else if (a == "보" && b == "가위") {
+                    return '2플레이어가 승리했습니다.'
+                }
+            }
+
+            console.log(rsp("가위", "보"))
+
+        </script>
+    </head>
+    <body>"가위, 바위, 보" 중 하나를 두개의 인자값으로 넣어 누가 승리했는지 출력해주는 함수 작성</body>
+</html>
