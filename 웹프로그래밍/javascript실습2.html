@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트 실습2</title>
+        <script>
+            let score1 = prompt("점수를 입력하세요: ")
+            let score2= prompt("점수를 입력하세요: ")
+            let score3 = prompt("점수를 입력하세요: ")
+
+           
+            if (100 >= score1 && score1 >= 65 && 100 >= score2 &&  score2 >= 65 && score3 <= 100 && score3 >= 65) {
+                console.log("합격입니다.")
+            }else if (score1 < 0 || score1 > 100 || score2 < 0 || score2 > 100 || score3 < 0 || score3 > 100) {
+                console.log("잘못된 점수가 입력되었습니다.")
+            }
+             else {
+                console.log("불합격입니다.")
+            }
+            
+        </script>
+    </head>
+    <body>자바스크립트 실습2 조건문 활용</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트 실습6</title>
+        <script>
+            let a = [1, 5, 6, 8, 3, 4, 1, 8, 9, 13, 5, 6, 9]
+            let avg = 0;
+            let result = 0;
+            for (let i = 0; i < a.length; i++) {
+                result += a[i];
+            }
+            avg = result / a.length;
+            var max = Math.max.apply(null, a)
+            console.log("합계:" + result + " 평균: " + avg + " 최대값: " + max)
+        </script>
+    </head>
+    <body>자바스크립트 실습6 배열 내 숫자들의 합 , 평균 , 최대값</body>
+</html>

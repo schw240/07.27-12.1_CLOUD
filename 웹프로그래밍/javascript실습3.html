@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트 실습3</title>
+        <script>
+            let text = [];
+            text = prompt("문자열을 입력하세요: ");
+            let len = text.length;
+            text = text.split("");
+            let tmp;
+            let i;
+            
+            for (i = 0; i < len/2; i++) {
+                tmp = text[i];
+                text[i] = text[len - 1 - i];
+                text[len -i -1] = tmp;
+                console.log(text.join(""));
+            }
+
+            console.log(text)
+
+        </script>
+    </head>
+    <body>자바스크립트 실습3 문자열 뒤집기</body>
+</html>
