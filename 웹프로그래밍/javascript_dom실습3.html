@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>구구단</title>
-        <script>
-        function execute() {
-            var target = document.getElementById("gugu");
-            var dan, num;
-            var result;
-            var html = "";
-            html += "<table align='center' border='1' width='800'>";
-            for(dan=1; dan<10; dan++) {
-                html += "<tr>";
-                for(num=2; num<10; num++) {
-                    result = dan * num;
-                    html += "<td align='center'>" + num + ' * ' + dan + ' = ' + result + "</td>";
-                }
-            html += "</tr>";
+        <title>DOM 실습</title>
+        <style>
+            .on {
+                float: left;
+                width: 130px;
+                height: 600px;
+                margin: 0 auto;
             }
-            html += "</table><br />";
-            target.innerHTML = html;
-        }
+            div > div {
+                font-size: 30px;
+                font-weight: bolder;
+                text-align: left;
+            }
+
+            div > div > div {
+                font-size: 15px;
+                font-weight: lighter;
+                text-align: left;
+            }
+        </style>
+        <script>
+            window.onload = () => {
+                let hello = document.querySelector("#hello")
+                let html = ""
+                for (let i = 2; i < 10; i++) {
+                    // html += `<div>${i}단</div>`;
+                    let div = document.createElement("div")
+                    let text = document.createTextNode(i + "단" + "\n")
+                    div.appendChild(text)
+                    div.classList.add("on")
+                    let div2 = document.createElement("div")
+                    for (let j = 1; j < 10; j++) {
+                        let text2 = document.createTextNode(i + " X " + j + " = " + i*j);
+                        let p = document.createElement("p")
+                        p.appendChild(text2)
+                        div2.appendChild(p);
+                    }
+                    div.appendChild(div2)
+                    hello.appendChild(div)
+                    
+                }
+            }
         </script>
-        </head>
-        <body>
-            <div id="gugu"></div>
-        </body>        
+    </head>
+    <body>
+        <div id="hello"></div>
+    </body>
 </html>
