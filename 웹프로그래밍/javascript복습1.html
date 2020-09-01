@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이중 for문 이해 별 출력</title>
+        <script>
+            // //사각형
+            // text = ""
+            // for (let i = 0; i < 5; i++){
+            //     for (let j = 0; j < 5; j++) {
+            //         text += "*";
+            //     }
+            //     text += "\n";
+            // }
+
+            // console.log(text)
+
+            // 계단식
+
+            // text = "";
+            // for (let i = 0; i < 5; i++) {
+            //     for(let j = 0; j < 5; j++) {
+            //         if (i == j) {
+            //             text += "*";
+            //         }
+            //     }
+            //     console.log(text);
+            // }
+
+            // 대각선별
+/*             text = "";
+
+            for(let i = 0; i < 5; i++) {
+                for(let j = 0; j < 5; j++) {
+                    if(i == j) {
+                        text += "*";
+                    } else {
+                        text += " ";
+                    }
+                }
+                text += "\n";
+            }
+            console.log(text); */
+
+
+            // 계단식(역순)
+            text = "";
+            let k = 1;
+            for (let i = 0; i < 5; i++){
+                for(let j = 5; j > 1; j--){
+                    for(k = 1; k <= j; k++){
+                        text += "*";
+                    }
+                    console.log(text);
+                    text = "";
+                }
+                text += "\n";
+            }
+            console.log(text);
+        </script>
+    </head>
+    <body>잊우 for문 이해 별 출력하기</body>
+</html>

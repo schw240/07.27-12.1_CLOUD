@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>구구단</title>
+        <script>
+        function execute() {
+            var target = document.getElementById("gugu");
+            var dan, num;
+            var result;
+            var html = "";
+            html += "<table align='center' border='1' width='800'>";
+            for(dan=1; dan<10; dan++) {
+                html += "<tr>";
+                for(num=2; num<10; num++) {
+                    result = dan * num;
+                    html += "<td align='center'>" + num + ' * ' + dan + ' = ' + result + "</td>";
+                }
+            html += "</tr>";
+            }
+            html += "</table><br />";
+            target.innerHTML = html;
+        }
+        </script>
+        </head>
+        <body>
+            <div id="gugu"></div>
+        </body>        
+</html>

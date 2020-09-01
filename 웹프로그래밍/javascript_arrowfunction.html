@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>arrow function 실습</title>
+        <script>
+/*             let a = (a, b) => {
+                console.log(a + b)
+            }
+            a(1,3)
+
+            let d = (a, b) => a + b
+            console.log(d(1,3))
+ */
+            let game = (a, b) => {
+                if ((a == "가위" && b == "보") || (a=="바위" && b=="가위") || (a=="보" && b=="바위")) {
+                    console.log("1플레이어가 이겼습니다.")
+                } else if (a == b) {
+                    console.log("비겼습니다.")
+                } else {
+                    console.log("2플레이어가 이겼습니다.")
+                }
+            }
+            
+            game("가위" , "보")
+
+
+
+        </script>
+    </head>
+    <body>
+        arrow function 실습
+    </body>
+</html>

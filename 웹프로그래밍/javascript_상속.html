@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>class 만들기</title>
+        <script>
+            class Character {
+                constructor (name, job) {
+                    this.name = name;
+                    this.job = job;
+                    this.health = 200;
+                }
+
+                move() {
+                    this.health -= 10;
+                }
+            
+                rest() {
+                    this.health += 10;
+                }
+                
+                checkHealth () {
+                    return this.health;
+                }
+                
+            }
+
+            class Knight extends Character {
+                constructor (name, job) {
+                    super(name, job)
+                }
+            
+
+                attack() {
+                    console.log("공격합니다.")
+                }
+
+                move() {
+                    super.move()
+                    this.health -= 5;
+                }
+            }
+
+            class Healer extends Character {
+                constructor (name, job) {
+                    super(name, job)
+                    this.mana = 100;
+                }
+
+                heal(Character) {
+                    this.mana -= 10;
+                    Character.rest()
+                    Character.rest()
+                }
+
+                checkMana() {
+                    return this.mana;
+                }
+            }
+
+            knight1 = new Knight("기사1", "기사");
+            healer1 = new Healer("힐러1", "힐러");
+
+            knight1.move()
+            knight1.attack()
+
+            console.log(knight1.checkHealth())
+
+            healer1.heal(knight1);
+            console.log(knight1.checkHealth())
+            console.log(healer1.checkMana())
+
+        </script>
+    </head>
+    <body>객체지향 프로그래밍 실습</body>
+</html>
