@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>fetch 실습</title>
+        <style>
+            .userimg {
+                font-size: 20px;
+                font-weight: 500;
+                float: left;
+            }
+            .userimg > img{
+                width: 30px;
+                height: 30px;
+            }
+        </style>
+        <script>
+            fetch("https://api.github.com/users?since=1000")
+            .then(function(response){
+                return response.json();
+            }).then(function(response){
+                let body = document.querySelector("body");
+                let container = document.querySelector("#container");
+                html = ""
+                for(data of response) {
+                    let div = document.createElement("div");
+                    div.classList.add("userimg")
+                    html = `<img src = "${data.avatar_url}">`
+                    let text = document.createTextNode(data.login);
+                    div.innerHTML = html
+                    div.append(text)
+                    container.append(div)
+                }
+                body.append(container)
+            });
+        </script>
+    </head>
+    <body>
+        <div id="container">
+
+        </div>
+    <body>
+</html>

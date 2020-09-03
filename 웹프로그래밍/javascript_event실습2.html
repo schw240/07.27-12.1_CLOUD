@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>구구단</title>
+        <style>
+            #button {
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+                background-color: yellow;
+            }
+        </style>
+        <script>
+        function clickDiv(text) {
+            document.querySelector("#text").innerHTML = "클릭했습니다."
+        }
+        window.onload = () => {
+            document.querySelector("#button").onclick = (event) => {
+                document.querySelector("#text").innerHTML = "클릭했습니다."
+                console.log(event.target.getAttribute("data-text"))
+            }
+            document.querySelector("#input_text").onchange = (event) => {
+                console.log(event.target.value)
+                console.log(document.querySelector("#input_text").value)
+            }
+            document.querySelector("#input_text").onkeydown = (event) => {
+                console.log(event.target.value)
+                console.log(document.querySelector("#input_text").value)
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <!--
+        <div id="button" onClick="clickDiv('aaaa')">
+            버튼
+        </div>
+        -->
+        <div id="button" data-text="이걸받아줘">
+            버튼
+        </div>
+        <div id="text">
+        </div>
+        <input id="input_text" type="text"/>
+    <body>
+</html>

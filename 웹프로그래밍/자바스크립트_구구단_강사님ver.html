@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>구구단</title>
+        <style>
+            body > div {
+                float: left;
+                font-size: 16px;
+                margin-right: 20px;
+            }
+        </style>
+        <script>
+            window.onload = () => {
+              let body = document.querySelector("body");
+              // for i in range(2, 10):
+              for(let i = 2; i < 10; i++) {
+                //큰DIV
+                let div = document.createElement("div");
+                div.classList.add("gugudan")
+                //작은DIV
+                let child_div = document.createElement("h3");
+                //텍스트생성
+                let child_text = document.createTextNode(i + "단")
+                //작은DIV <- 텍스트
+                child_div.append(child_text)
+                //작은DIV -> 큰DIV
+                div.append(child_div)
+                for(let j=1; j < 10; j++) {
+                    let child_div = document.createElement("div");
+                    let child_text = document.createTextNode(`${i} X ${j} = ${i * j}`)
+                    child_div.append(child_text)
+                    div.append(child_div)
+                }
+                body.append(div);
+              }
+            }
+        </script>
+    </head>
+    <body>
+    <body>
+</html>

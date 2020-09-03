@@ -1,0 +1,567 @@
+<html>
+    <head>
+        <title>home</title>   
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <style>
+
+            /* css init */
+            body, html, ul {
+                font-family: 'Noto Sans KR', sans-serif;
+                margin: 0;
+                padding: 0;
+                color: #2d2d2d;
+            }
+
+            /* nav */
+            nav {
+                background-color: rgb(56, 68, 82);
+                height: 123px;
+            }
+
+            nav > div { 
+                width: 1200px;
+                margin: 0 auto;
+            }
+
+            nav > div #logo {
+                float: left;
+                height: 123px;
+            }
+
+            nav > div #logo div {  
+                display: table-cell;  
+                vertical-align: middle;
+                height: 123px;
+            }
+
+            nav > div #logo img {
+                display: inline-block;
+            }
+
+            nav > div #menu {
+                height: 123px;                
+                float: right;
+                list-style-type: none;
+                color: white;
+            }
+
+            nav > div #menu li {
+                float: left;
+                height: 123px;
+                line-height: 123px;
+                margin-left: 20px;
+                font-weight: 600;
+            }
+
+            /* banner */
+            #banner_wrap {
+                background-color: rgb(0, 172,254);
+                height: 754px;
+            }
+
+            #banner_wrap #banner {
+                width: 1200px;
+                margin: 0 auto;
+            }
+
+            #banner_wrap #banner .ment {
+                text-align: center;
+                color: white;
+            }
+
+            #banner_wrap #banner .ment:nth-child(1) { 
+                padding-top: 75px;            
+                font-weight: 200;
+                font-size: 40px;
+            }
+            #banner_wrap #banner .ment:nth-child(2) {      
+                margin-top: 30px;
+                font-weight: 700;
+                font-size: 45px;       
+            }
+            #banner_wrap #banner .ment:nth-child(3) {  
+                margin-top: 30px;
+                font-weight: 200;
+                font-size: 25px; 
+                line-height: 70px;          
+            }
+
+            #banner_image {
+                margin: 0 auto;
+                background-image: url('images/main/window.png');
+                width: 1000px;
+                height: 300px;
+                margin-top: 55px;
+            }
+
+
+            /* option */
+            #option {
+                overflow: auto;
+                width: 1200px;
+                margin: 0 auto;
+            }
+
+            #option ul{
+                width: 33%;
+                margin: 130px 0 100px 0;
+                float: left;
+                list-style-type: none;
+                text-align: center;
+            }
+
+            #option ul li {
+                margin-top: 25px;
+            }
+
+            #option ul li:nth-child(2) {
+                font-size: 17px;
+                font-weight: 500;
+            }
+
+            #option ul li:nth-child(3) {
+                font-size: 15px;
+                color: gray;
+                line-height: 30px;
+            }
+
+            #option .moreinfo {
+                margin: 50px auto 0px auto;
+                width: 135px;
+                height: 50px;
+                line-height: 50px;
+                background-color: rgb(56,68,82);
+                border-radius: 5px;
+                color: white;
+            }
+
+            #option_bottom {
+                margin: 0 auto;
+                margin-bottom: 50px;
+                width: 1200px;
+                text-align: center;
+                font-weight: 600;
+                color: gray;
+            }
+
+
+
+
+            /*boxes*/
+            #boxes_wrap {
+                margin: 0 auto;
+                width: 1200px;
+            }
+
+            #boxes_wrap .box {
+                float: left;
+                width: 20%;
+                height: 200px;
+                box-sizing: border-box;                
+            }            
+            
+            #boxes_wrap .box:nth-child(2n+1) {                
+                background-color: rgb(62, 62, 62);                
+            }
+
+            #boxes_wrap .box:nth-child(2n) {
+                background-color: rgb(110, 110, 110);                
+            }
+
+            #boxes_wrap .box:nth-child(3) {
+                background-color: rgb(6, 168, 235);
+            }
+
+            .box div {
+                margin-top: 30px;
+                color: white;
+                text-align: center;
+                font-size: 12px;
+                vertical-align: middle;
+            }
+
+            .box .heart {
+                margin: 0 auto;
+                width: 85px;
+            }
+
+            .box .heart img {
+                width: 20px;
+                float: left;
+                margin-right: 4px;
+            }
+
+            .box .heart span {                
+                float: left;
+            }
+
+            .box div:nth-child(1) {
+                font-weight: 500;
+            }
+
+            .box div:nth-child(2) {
+                font-weight: 200;
+            }
+            
+            .box div:nth-child(3) {
+                font-weight: 700;
+            }
+
+
+            /*board*/
+            #board_wrap {
+                overflow: hidden;
+                padding-top: 80px;
+                padding-bottom: 80px;
+                clear: both;
+                width: 1200px;
+                margin: 0 auto;
+            }
+
+            #board_wrap p {
+                padding-right: 30px;
+            }
+
+            #board_wrap .left {
+                width: 50%;
+                float: left;
+            }
+
+            #board_wrap .left p {
+                color: gray;
+                line-height: 40px;
+            }
+
+            #board_wrap .right {
+                width: 25%;
+                float: left;
+                list-style-type: none;
+            }
+
+            #board_wrap .right ul {
+                list-style-type: none;
+                padding: 0 10px;
+            }
+
+            #board_wrap .right ul li {
+                height: 30px;
+                color: gray;
+            }
+
+            #board_wrap .right ul li:first-child{
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                font-weight: 600;
+                font-size:18px;
+                height: 50px;
+                border-bottom: 3px solid black;
+                color: #2d2d2d;
+            }
+
+            #board_wrap .right ul li:first-child .haxagon{
+                float: right;
+                width: 34px;
+                height: 38px;
+                line-height: 38px;
+                background-image:url('./images/main/haxagon.png');
+                color: white;
+                text-align: center;
+            }
+            
+
+            #board_wrap .readmore {
+                text-align: center;
+                float: right;
+                margin: 50px 0px 0px 0px;
+                width: 135px;
+                height: 45px;
+                line-height: 45px;
+                background-color: rgb(56,68,82);
+                border-radius: 5px;
+                color: white;
+            }
+
+            
+            /* info */
+            #info_wrap{
+                padding: 60px 0;
+                text-align: center;
+                color: white;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position-y: bottom;
+                background-position-x: center;
+                background-color: rgb(6, 168, 235);
+                background-image: url('./images/main/peoples.png')
+            }
+
+            #info_wrap p {
+                font-weight: 100;
+                letter-spacing: 1px;
+                color: #fcfcfc;
+            }
+
+            #info_wrap p:first-of-type {
+                margin-top: 50px;
+                line-height: 40px;
+            }
+
+            #info_wrap p:last-of-type {
+                margin-top: 80px;
+            }
+
+
+            /* company */
+            #company_wrap {
+                overflow: hidden;
+                padding: 100px 0;
+                width: 1200px;
+                margin: 0 auto;
+            }
+
+            #company_wrap h3 {
+                color: gray;
+                padding-bottom: 40px;
+                text-align: center;
+            }
+
+            #company_wrap .logos div img {
+                width: 170px;
+            }
+
+            #company_wrap .logos div {
+                box-sizing: border-box;
+                padding-top: 30px;
+                width: 25%;
+                text-align: center;
+                height: 110px;
+                float: left;
+                border-right: 1px solid #c7c7c7;
+            }
+
+            #company_wrap .logos div:last-child {
+                border-right: 1px none #c7c7c7;
+            }
+
+            #company_wrap > div:nth-of-type(1) {
+                overflow: auto;
+                border-bottom: 1px solid #c7c7c7;
+            }
+
+
+            /* Fotter */
+            #fotter {
+                text-align: center;
+                color: white;
+                font-weight: 200;
+                line-height: 200px;
+                height: 200px;
+                background-color: #384452;
+            }
+
+        </style>
+    </head>
+    <body>    
+        <nav>
+            <div>
+                <div id="logo">
+                    <div>
+                        <img src="images/main/logo.png">
+                    </div>
+                </div>
+                <ul id="menu">
+                    <li>HOME</li>
+                    <li>ABOUT</li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
+        </nav>
+        <div id="banner_wrap">
+            <div id="banner">
+                <div class="ment">
+                    Present your Templates with Style
+                </div>
+                <div class="ment">
+                    Eyecatching. Awesome. Pixelperfect.
+                </div>
+                <div class="ment">
+                    Whether you require large banners and posters to promote your company or some more subtle letter heads and business cards, our highly skilled graphic designers will produce the perfect article for you
+                </div>
+                <div id="banner_image">                    
+                </div>
+        </div>
+
+        <div id="option_wrap">
+            <div id="option">
+                <ul>
+                    <li><img src="images/main/card_image_1.png"/></li>
+                    <li>Several Colour Options</li>
+                    <li>                        
+                        We will put together a dataled and<br/>
+                        We will put togetherc<br/>
+                        We will put together a dataled<br/>
+                        We will put<br/>
+                    </li>
+                    <li>
+                        <div class="moreinfo">
+                            More Info
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li><img src="images/main/card_image_2.png"/></li>
+                    <li>Several Colour Options</li>
+                    <li>                        
+                        We will put together a dataled and<br/>
+                        We will put togetherc<br/>
+                        We will put together a dataled<br/>
+                        We will put<br/>
+                    </li>
+                    <li>
+                        <div class="moreinfo">
+                            More Info
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li><img src="images/main/card_image_3.png"/></li>
+                    <li>Several Colour Options</li>
+                    <li>                        
+                        We will put together a dataled and<br/>
+                        We will put togetherc<br/>
+                        We will put together a dataled<br/>
+                        We will put<br/>
+                    </li>
+                    <li>
+                        <div class="moreinfo">
+                            More Info
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="option_bottom">
+                OUR LATEST PROJECTS
+            </div>
+        </div>
+
+        <div id="boxes_wrap">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">
+                <div>Untitled Project 01</div>
+                <div>Logodesign Webdesign, Graphics</div>
+                <div>
+                    <div class="heart">
+                        <img src="images/main/heart.png"/>
+                        <span>214 Likes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <div id="board_wrap">
+            <div class="left">
+                <h3>
+                    Getting Started with Wordpress
+                </h3>
+                <p>
+                    We work with clients big and small across a range of sectors and we wuilise all
+                    forms of media to get your name out there in a way that's right for you. We
+                    believe that analysis of your company and your customers is key in responding
+                    effectively to your promotional needs and we will work with you.
+                </p>
+                <div class="readmore">
+                    Read More
+                </div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        Frequently Asked
+                        <div class="haxagon">
+                            5
+                        </div>
+                    </li>
+                    <li>How to change the website colour?</li>
+                    <li>Is my website ready for wordpress?</li>
+                    <li>Which version is the lasest for WP?</li>
+                    <li>Could I translate the site?</li>
+                    <li>How do I use wordpress plugins?</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        Latest Blogposts
+                        <div class="haxagon">
+                            13
+                        </div>
+                    </li>
+                    <li>How to change the website colour?</li>
+                    <li>Is my website ready for wordpress?</li>
+                    <li>Which version is the lasest for WP?</li>
+                    <li>Could I translate the site?</li>
+                    <li>How do I use wordpress plugins?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="info_wrap">
+            <img src="images/main/_.png"/>
+            <p>
+                How to change the website colour Is my website ready for wordpress <br/>
+                Could I translate the site colour Is my website read for <br/>
+                change the website colour Is my website read for <br/>
+            </p>
+            <p>
+                Jonathan Doe - <span style="color: #2d2d2d;">Webdesigner & Interpreneur @Creative Studios</span>
+            </p>
+        </div>
+
+        <div id="company_wrap">
+            <h3>
+                SOME OF OUR CLIENTS
+            </h3>
+            <div class="logos">
+                <div>
+                    <img src="images/main/logo_1.png"/>
+                </div>
+                <div>
+                    <img src="images/main/logo_2.png"/>
+                </div>
+                <div>
+                    <img src="images/main/logo_3.png"/>
+                </div>
+                <div>
+                    <img src="images/main/logo_4.png"/>
+                </div>
+            </div>
+            <div class="logos">
+                <div>
+                    <img src="images/main/logo_3.png"/>
+                </div>
+                <div>
+                    <img src="images/main/logo_1.png"/>
+                </div>
+                <div>
+                    <img src="images/main/logo_2.png"/>
+                </div>
+                <div>
+                    <img src="images/main/logo_4.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="fotter">
+            Copyright C 2014 by KL-Webmedia | All rights reserved
+        </div>
+
+    </body>
+</html>

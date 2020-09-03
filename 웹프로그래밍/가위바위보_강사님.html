@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>가위바위보</title>
+        <style>
+            #message, #boxs, #result_text {
+                font-size: 50px;
+                width: 1000px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            #boxs {
+                margin-top: 50px;
+            }
+            #boxs img {
+                cursor: pointer;
+            }
+            #result {
+                width: 800px;
+                margin: 0 auto;
+            }
+        </style>
+        <script>
+            function game(user){
+                console.log(user);
+            }
+            window.onload = () => {
+                /*
+                document.querySelector("#si").onclick = () => {
+                    console.log("1")
+                }
+                document.querySelector("#rock").onclick = () => {
+                    console.log("2")
+                }
+                document.querySelector("#paper").onclick = () => {
+                    console.log("3")
+                }*/
+                const text = ['가위','바위','바위'];
+                let images = document.querySelectorAll("#boxs img");
+                for( image of images) {
+                    image.onclick = (event) => {
+                        let user = event.target.getAttribute("data-user");
+                        let computer = Math.floor(Math.random() * 3) + 1;
+                        let result = document.querySelector("#result");
+                        // result.innerHTML = ""
+                        // let user_img = document.createElement("img")
+                        // user_img.setAttribute("src",user+".png")
+                        // result.append(user_img)
+                        // let computer_img = document.createElement("img")
+                        // computer_img.setAttribute("src",computer+".png")
+                        // result.append(computer_img)
+                        result.innerHTML = `
+                        <img src='${user}.png'/><img src='${computer}.png'/>
+                        `;
+                        result_text = document.querySelector("#result_text")
+                        if ((user == 1 && computer == 3) ||
+                            (user == 2 && computer == 1) ||
+                            (user == 3 && computer == 2)) {
+                            result_text.innerHTML = "이겼습니다."
+                        }else if (user == computer) {
+                            result_text.innerHTML = "비겼습니다."
+                        }else {
+                            result_text.innerHTML = "졌습니다."
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="message">셋 중 하나를 선택해주세요</div>
+        <div id='boxs'>
+            <img id="si" src='1.png' data-user="1">
+            <img id="rock" src='2.png' data-user="2">
+            <img id="paper" src='3.png' data-user="3">
+        </div>
+        <div id="result">
+        </div>
+        <div id="result_text">
+        </div>
+    </body>
+</html>
