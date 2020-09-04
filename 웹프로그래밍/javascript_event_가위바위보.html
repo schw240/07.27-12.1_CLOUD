@@ -39,30 +39,39 @@
                 margin: 0 30px;
                 width: 200px;
             }
+
+            #result_text {
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+            }
         </style>
         <script>
+            function game(user){
+                console.log(user);
+            }
             window.onload = () => {
-                document.querySelectorAll("#images img").onclick = (event) => {
-                    for(image of images) {
-                        image.onclick = (event) => {
-                            user = event.target.getAttribute("data-text")
+                let images = document.querySelectorAll("#images img");
+                for(image of images) {
+                    image.onclick = (event) => {
+                        user = event.target.getAttribute("data-text")
 
-                            var jbRandom = Math.random();
-                            var computer = Math.floor( jbRandom * 4 +1);
-                            console.log(event.target.getAttribute("data-text"))
+                        var jbRandom = Math.random();
+                        var computer = Math.floor( jbRandom * 3 +1);
+                        console.log(event.target.getAttribute("data-text"))
 
-                            let result = document.querySelector("#results");
-                            result.innerHTML = `
-                                <img src='${user}.png'/><img src='${computer}.png'/>
-                                `;
-                            result_text = document.querySelector("#result_text")                            
-                            if ((computer == 3 && user == 1) || (computer == 1 && user == 2) || (computer == 2 && user == 3)) {
-                                result_text.innerHTML = "이겼습니다."
-                            } else if(user == computer) {
-                                result_text.innerHTML = "비겼습니다."
-                            } else {
-                                result_text.innerHTML = "졌습니다."
-                            }
+                        let results = document.querySelector("#results");
+                        results.innerHTML = `
+                            <img src='images/rsp/${user}.png'/><img src='images/rsp/${computer}.png'/>
+                            `;
+                        result_text = document.querySelector("#result_text")                            
+                        if ((computer == 3 && user == 1) || (computer == 1 && user == 2) || (computer == 2 && user == 3)) {
+                            result_text.innerHTML = "이겼습니다."
+                        } else if(user == computer) {
+                            result_text.innerHTML = "비겼습니다."
+                        } else {
+                            result_text.innerHTML = "졌습니다."
+                        }
                     }
                 }
             }
