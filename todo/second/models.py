@@ -17,6 +17,8 @@ class Favourite(models.Model):
     reg_date = models.DateField(auto_now_add=True)
     group = models.ForeignKey(FavouriteGroup, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
 
 class TodoGroup(models.Model):
     seq = models.AutoField(primary_key=True)

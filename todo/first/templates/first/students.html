@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>학생들</title>
-</head>
-<body>
-    <h3>{{ text }}</h3>
+{% extends 'first/layout.html' %}
+{% block title %}
+<title>학생들</title>
+{% endblock %}
+{% block content %}
+    <h3>{{ text|truncatechars:10 }}</h3>
+    <h3>{{ date|date:'Y-m-d' }}</h3>
     {% for student in students %}
-    <!-- 이 안에있는 내용들이 반복-->
+    <!-- 요 안에있는 내용들이 반복됩니다 -->
     <div>
         {{ student.name }}
         {{ student.address }}
         {{ student.email }}
     </div>
     {% endfor %}
-</body>
-</html>

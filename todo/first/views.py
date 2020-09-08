@@ -5,6 +5,9 @@ from .models import Students, Scores
 
 # Create your views here.
 def index(request):
+    print('한주', request.method)
+    print('한주', request.GET)
+    print('한주', request.headers)
     return render(request, 'first/index.html')
 
 

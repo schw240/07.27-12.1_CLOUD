@@ -1,0 +1,22 @@
+{% extends 'second/layout.html' %}
+{% block title %}
+즐겨찾기
+{% endblock %}
+{% block content %}
+<h3>즐겨찾기</h3>
+<div>
+{% for data in datas %}
+    <div class="item">
+        <div class="name">
+            <a href="">{{ data.name }}</a>
+        </div>
+        <div class="group">
+            {{ data.group }}
+        </div>
+        <div class="regdate">
+            {{ data.reg_date|date:"Y-m-d" }}
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

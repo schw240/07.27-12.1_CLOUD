@@ -1,0 +1,55 @@
+{% extends 'second/layout.html' %}
+{% block title %}
+할일
+{% endblock %}
+{% block content %}
+<h3>할일</h3>
+<div class="items">
+<div class="items-title">할일</div>
+{% for data in pendings %}
+    <div class="item">
+        <div class="name">
+            {{ data.name }}
+        </div>
+        <div class="group">
+            {{ data.group }}
+        </div>
+        <div class="regdate">
+            {{ data.reg_date|date:"Y-m-d" }}
+        </div>
+    </div>
+{% endfor %}
+</div>
+<div class="items">
+<div class="items-title">진행중</div>
+{% for data in inprogress %}
+    <div class="item">
+        <div class="name">
+            {{ data.name }}
+        </div>
+        <div class="group">
+            {{ data.group }}
+        </div>
+        <div class="regdate">
+            {{ data.reg_date|date:"Y-m-d" }}
+        </div>
+    </div>
+{% endfor %}
+</div>
+<div class="items">
+<div class="items-title">완료</div>
+{% for data in ends %}
+    <div class="item">
+        <div class="name">
+            {{ data.name }}
+        </div>
+        <div class="group">
+            {{ data.group }}
+        </div>
+        <div class="regdate">
+            {{ data.reg_date|date:"Y-m-d" }}
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

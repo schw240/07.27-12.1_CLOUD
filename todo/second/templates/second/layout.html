@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <style>
+        html, body, ul {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+            background-color: #f5f5fb;
+        }
+        ul {
+            list-style:none;
+        }
+        #menu, #content {
+            float: left;
+        }
+        #menu {
+            background-color: #4c4cab;
+            width: 200px;
+            height: 100%;
+        }
+        #menu #logo {
+            margin-top: 20px;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+        }
+        #menu ul {
+            margin-top: 40px;
+        }
+        #menu ul a {
+            color: #bbbbe5;
+            text-decoration: none;
+        } 
+        #menu ul li {
+            color: #bbbbe5;
+            margin-bottom: 10px;
+            font-size: 15px;
+            padding-left: 30px;
+        }
+        #content {
+            padding-left: 30px;
+        }
+        h3 {
+            width: 800px;
+            border-bottom: 1px solid #c8c8cd;
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+        #content .item {
+            padding: 15px;
+            overflow: auto;
+            border: 1px solid #c8c8cd;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        #content .name {
+            float: left;
+        }
+        #content .regdate {
+            margin-right: 10px;
+        }
+        #content .regdate,  #content .group{
+            float: right;
+        }
+        #content .items {
+            width: 33%;
+            box-sizing: border-box;
+            float: left;
+            padding-left: 10px;
+        }
+        #content .items-title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <div id="logo">Todo&Favorite</div>
+        <ul>
+            <li><a href="{% url 'second:index' %}">Home</a></li>
+            <li><a href="{% url 'second:favourite' %}">Favorite</a></li>
+            <li><a href="{% url 'second:todo' %}">Todo</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

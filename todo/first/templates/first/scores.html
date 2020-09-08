@@ -1,41 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>scores</title>
-    <style>
-        #list {
-            font-weight: bold;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #score {
-            font-weight: lighter;
-            font-size: 14px;
-            text-align: center;
-            margin: 10px;
-        }
-    </style>
-</head>
-<body>
-    <table>
-        <tr id='list'>
-            <td>이름</td>
-            <td>수학</td>
-            <td>과학</td>
-            <td>영어</td>
-        </tr>        
-        {% for score in scores %}
-        <!-- 이 안에있는 내용들이 반복-->
-        <tr id="score">
-            <td>{{ score.name }}</td>
-           <td>{{ score.math }}</td>
-           <td>{{ score.science }}</td>
-           <td>{{ score.english }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-</body>
-</html>
+{% extends 'first/layout.html' %}
+{% block title %}
+<title>학생들</title>
+{% endblock %}
+{% block content %}
+    <h3>{{ text|truncatechars:10 }}</h3>
+    <h3>{{ date|date:'Y-m-d' }}</h3>
+    {% for student in students %}
+    <!-- 요 안에있는 내용들이 반복됩니다 -->
+    <div>
+        {{ student.name }}
+        {{ student.address }}
+        {{ student.email }}
+    </div>
+    {% endfor %}
+{% endblock %}
