@@ -8,7 +8,7 @@
 {% block content %}
 <h3>
 즐겨찾기
-<img src="{% static 'second/icon_add.png' %}"/>
+<a href = "{% url 'second:favourite_register' %}"><img src="{% static 'second/icon_add.png' %}"/></a>
 </h3>
 <div>
 {% for data in datas %}
@@ -18,6 +18,12 @@
         </div>
         <div class="group">
             {{ data.group }}
+            <div id="more">     
+                <img src="{% static 'second/icon_more.png' %}" />
+                    <div class="popup">
+                        <div onClick="favourite_detail('{{favourite.seq}}')">삭제</div>
+                    </div>
+            </div>
         </div>
         <div class="regdate">
             {{ data.reg_date|date:"Y-m-d" }}
@@ -26,3 +32,4 @@
 {% endfor %}
 </div>
 {% endblock %}
+

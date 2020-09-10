@@ -8,8 +8,8 @@ Favorite
 {% block content %}
 <h3>
     {{ detail.name }}
-    <img src="{% static 'second/icon_delete.png' %}"/>
-    <img src="{% static 'second/icon_modify.png' %}"/>
+    <a href="{% url 'second:favourite_delete' detail.seq %}"><img src="{% static 'second/icon_delete.png' %}"></a>
+    <a href="{% url 'second:favourite_modify' detail.seq %}"><img src="{% static 'second/icon_modify.png' %}"></a>
 </h3>
 <div id="detail">
 <ul>

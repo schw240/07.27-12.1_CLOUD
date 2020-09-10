@@ -64,8 +64,8 @@
 
         #content .item {
             padding: 15px;
-            overflow: auto;
             border: 1px solid #c8c8cd;
+            height: 30px;
             border-radius: 6px;
             margin-bottom: 10px;
             background-color: white;
@@ -117,6 +117,53 @@
             font-weight: blod;
         }
 
+        #container {
+            margin: 50px;
+        }
+
+        #fav_title_sec {
+            font-size: 30px;
+            font-weight: bolder;
+            border-bottom: 1px solid lightgray;
+            width: 800px;
+        }
+
+        #todo_title_sec {
+            font-size: 30px;
+            font-weight: bolder;
+            border-bottom: 1px solid lightgray;
+            width: 800px;
+        }
+
+        #container form table {
+            margin-top: 50px;
+            text-align: left;
+
+        }
+
+
+        #more {
+            float: right;
+            margin-top: 3px;
+            position: relative;
+        } 
+
+        #more:hover .popup {
+            display: block;
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 100px;
+        }
+        
+        .popup div {
+            background-color:gray;
+        }
+        
     </style>
 </head>
 <body>

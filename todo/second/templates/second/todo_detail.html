@@ -8,8 +8,8 @@ Todo
 {% block content %}
 <h3>
     {{ detail.name }}
-    <img src="{% static 'second/icon_delete.png' %}"/>
-    <img src="{% static 'second/icon_modify.png' %}"/>
+    <a href="{% url 'second:todo_delete' detail.seq %}"><img src="{% static 'second/icon_delete.png' %}"></a>
+    <a href="{% url 'second:todo_modify' detail.seq %}"><img src="{% static 'second/icon_modify.png' %}"></a>
 </h3>
 <div id="detail">
 <ul>
@@ -19,7 +19,7 @@ Todo
     <li><span>등록일</span>{{ detail.reg_date }}</li>
     <li><span>종료일</span>{{ detail.end_date }}</li>
     <li><span>삭제여부</span>{{ detail.del_yn }}</li>
-    <li><span>그룹</span>{{ detail.group }}</li>
+    <li><span>그룹</span>{{ detail.group }}</li>    
 </ul>
 </div>
 {% endblock %}

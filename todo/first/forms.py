@@ -20,6 +20,3 @@ class StudentModelForm(forms.ModelForm):
         labels = {
             'name': '이름'
         }
-        help_text = {
-            'name': '이름을 입력해주세요'
-        }

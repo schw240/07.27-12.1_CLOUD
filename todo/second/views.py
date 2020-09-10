@@ -1,5 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
+import datetime
 from .models import Favourite, Todo
+from .forms import FavouriteForm, FavouriteModelForm, TodoForm, TodoModelForm
 
 
 # Create your views here.
@@ -18,6 +22,23 @@ def favourite_detail(request, seq):
     return render(request, "second/favourite_detail.html",{
         'detail': detail
     })
+
+def favourite_register(request):
+    if request.method == 'GET':
+        # form = StudentForm()
+        form = FavouriteModelForm()
+        return render(request, 'second/favourite_register.html', {
+            'form':form
+        })
+    elif request.method == 'POST':
+        form = FavouriteModelForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("second:favourite")
+        else:
+             return render(request, 'second/favourite_register.html', {
+                'form':form
+            })
 
 def todo(request):
     
@@ -46,3 +67,71 @@ def todo_detail(request, seq):
     return render(request, "second/todo_detail.html", {
         'detail': detail
     })
+
+def todo_register(request):
+    if request.method == 'GET':
+        form = TodoModelForm()
+        return render(request, 'second/todo_register.html', {
+            'form':form
+        })
+    elif request.method == 'POST':
+        form = TodoModelForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            post = form.save()
+            return redirect("second:todo")
+        else:
+            return render(request, 'second/todo_register.html', {
+                'form':form
+            })
+
+def favourite_modify(request, seq):
+    
+    favourite = Favourite.objects.get(pk=seq)
+
+    if request.method == 'GET':
+        form = FavouriteModelForm(instance=favourite)
+        return render(request, 'second/favourite_modify.html', {
+            'form':form
+        })
+    elif request.method == 'POST':
+        form = FavouriteModelForm(request.POST, instance=favourite)
+        if form.is_valid():
+            form.save() 
+            return redirect("second:favourite")
+        else:
+            return render(request, 'second/favourite_register.html', {
+                'form':form
+            })
+
+def favourite_delete(request, seq):
+    favourite = Favourite.objects.get(pk=seq)
+
+    favourite.delete()
+    return redirect("second:favourite")
+
+
+def todo_delete(request, seq):
+    todo = Todo.objects.get(pk=seq)
+
+    todo.delete()
+    return redirect("second:todo")
+
+def todo_modify(request, seq):
+    
+    todo = Todo.objects.get(pk=seq)
+
+    if request.method == 'GET':
+        form = TodoModelForm(instance=todo)
+        return render(request, 'second/todo_modify.html', {
+            'form':form
+        })
+    elif request.method == 'POST':
+        form = TodoModelForm(request.POST, instance=todo)
+        if form.is_valid():
+            form.save() 
+            return redirect("second:todo")
+        else:
+            return render(request, 'second/todo_register.html', {
+                'form':form
+            })

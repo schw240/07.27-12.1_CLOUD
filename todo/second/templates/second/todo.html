@@ -8,7 +8,7 @@
 {% block content %}
 <h3>
 할일
-<img src="{% static 'second/icon_add.png' %}"/>
+<a href="{% url 'second:todo_register' %}"><img src="{% static 'second/icon_add.png' %}"></a>
 </h3>
 
 
@@ -23,6 +23,7 @@
         </div>
         <div class="group">
             {{ data.group }}
+            <img class="function_img" src="{% static 'second/icon_more.png' %}"/>    
         </div>
         <div class="regdate">
             {{ data.reg_date|date:"Y-m-d" }}
