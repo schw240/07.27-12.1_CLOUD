@@ -1,0 +1,17 @@
+<!--
+<form action="{% url 'first:students_add' %}" method="post">
+    {% csrf_token %}
+    <input name="name" type="text"/>
+    <input name="address" type="text"/>
+    <input name="email" type="text"/>
+    <input type="submit" value="등록"/>
+    </form>
+-->
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="등록"/>
+</form>

@@ -1,16 +1,32 @@
 {% extends 'first/layout.html' %}
-{% block title %}
-<title>학생들</title>
-{% endblock %}
-{% block content %}
-    <h3>{{ text|truncatechars:10 }}</h3>
-    <h3>{{ date|date:'Y-m-d' }}</h3>
-    {% for student in students %}
-    <!-- 요 안에있는 내용들이 반복됩니다 -->
-    <div>
-        {{ student.name }}
-        {{ student.address }}
-        {{ student.email }}
-    </div>
-    {% endfor %}
+ {% block title %}
+ <title>점수</title>
+ {% endblock %}
+ 
+ {% block content %}
+ <form action="{% url 'first:scores_add' %}" method="post">
+    {% csrf_token %}
+    <div>이름<input name="name" type="text"/></div>
+    <div>수학<input name="math" type="text"/></div>
+    <div>과학<input name="science" type="text"/></div>
+    <div>영어<input name="english" type="text"/></div>
+    <div><input type="submit" value="등록"/></div>
+</form>
+
+
+ <table>
+ <thead>
+    <tr>
+        <td>이름</td><td>수학</td><td>과학</td><td>영어</td>
+    </tr>
+</thead>
+{% for score in scores %}
+    <tr>
+        <td>{{ score.name }}</td>
+        <td>{{ score.math }}</td>
+        <td>{{ score.science }}</td>
+        <td>{{ score.english }}</td>
+    </tr>
+{% endfor %}
+</table>
 {% endblock %}

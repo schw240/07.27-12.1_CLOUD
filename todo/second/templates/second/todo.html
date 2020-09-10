@@ -1,15 +1,25 @@
 {% extends 'second/layout.html' %}
+{% load static %}
+
 {% block title %}
 할일
 {% endblock %}
+
 {% block content %}
-<h3>할일</h3>
+<h3>
+할일
+<img src="{% static 'second/icon_add.png' %}"/>
+</h3>
+
+
 <div class="items">
 <div class="items-title">할일</div>
 {% for data in pendings %}
     <div class="item">
         <div class="name">
-            {{ data.name }}
+            <a href="{% url 'second:todo_detail' data.seq %}">
+                {{ data.name }}
+            </a>
         </div>
         <div class="group">
             {{ data.group }}
@@ -20,13 +30,15 @@
     </div>
 {% endfor %}
 </div>
+
+
 <div class="items">
 <div class="items-title">진행중</div>
 {% for data in inprogress %}
     <div class="item">
-        <div class="name">
+        <a href="{% url 'second:todo_detail' data.seq %}">
             {{ data.name }}
-        </div>
+        </a>
         <div class="group">
             {{ data.group }}
         </div>
@@ -36,13 +48,15 @@
     </div>
 {% endfor %}
 </div>
+
+
 <div class="items">
 <div class="items-title">완료</div>
 {% for data in ends %}
     <div class="item">
-        <div class="name">
+        <a href="{% url 'second:todo_detail' data.seq %}">
             {{ data.name }}
-        </div>
+        </a>
         <div class="group">
             {{ data.group }}
         </div>
@@ -52,4 +66,6 @@
     </div>
 {% endfor %}
 </div>
+
+
 {% endblock %}

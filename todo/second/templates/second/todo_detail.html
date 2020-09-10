@@ -1,0 +1,25 @@
+{% extends 'second/layout.html' %}
+{% load static %}
+
+{% block title %}
+Todo
+{% endblock %}
+
+{% block content %}
+<h3>
+    {{ detail.name }}
+    <img src="{% static 'second/icon_delete.png' %}"/>
+    <img src="{% static 'second/icon_modify.png' %}"/>
+</h3>
+<div id="detail">
+<ul>
+    <li><span>SEQ</span>{{ detail.seq }}</li>
+    <li><span>명칭</span>{{ detail.name }}</li>
+    <li><span>상태</span>{{ detail.status }}</li>
+    <li><span>등록일</span>{{ detail.reg_date }}</li>
+    <li><span>종료일</span>{{ detail.end_date }}</li>
+    <li><span>삭제여부</span>{{ detail.del_yn }}</li>
+    <li><span>그룹</span>{{ detail.group }}</li>
+</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+<form action="{% url 'first:scores_add' %}" method="post">
+    {% csrf_token %}
+    <input name="name" type="text"/>
+    <input name="math" type="text"/>
+    <input name="science" type="text"/>
+    <input name="english" type="text"/>
+    <input type="submit" value="등록"/>
+</form>
+

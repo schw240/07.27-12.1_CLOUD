@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block title %}    
+    {% endblock %}
+    <style>
+        form {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/first/students"/>학생정보</a>
+    <a href="/first/scores"/>점수정보</a>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

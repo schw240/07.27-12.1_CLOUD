@@ -1,14 +1,20 @@
 {% extends 'second/layout.html' %}
+{% load static %}
+
 {% block title %}
 즐겨찾기
 {% endblock %}
+
 {% block content %}
-<h3>즐겨찾기</h3>
+<h3>
+즐겨찾기
+<img src="{% static 'second/icon_add.png' %}"/>
+</h3>
 <div>
 {% for data in datas %}
     <div class="item">
         <div class="name">
-            <a href="">{{ data.name }}</a>
+            <a href="{% url 'second:favourite_detail' data.seq %}">{{ data.name }}</a>
         </div>
         <div class="group">
             {{ data.group }}
