@@ -1,15 +1,20 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
+from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
 import datetime
 from .models import Favourite, Todo
-from .forms import FavouriteForm, FavouriteModelForm, TodoForm, TodoModelForm
+from .forms import FavouriteModelForm, TodoModelForm, SignupForm, LoginForm
 
 
 # Create your views here.
 def index(request):
+    print(request.user.is_authenticated)
+    print(request.user)    
     return render(request, "second/index.html")
 
+@login_required
 def favourite(request):
     data = Favourite.objects.all()
     return render(request, "second/favourite.html",
@@ -135,3 +140,41 @@ def todo_modify(request, seq):
             return render(request, 'second/todo_register.html', {
                 'form':form
             })
+
+def signup(request):
+    
+    if request.method == 'GET':
+        form = SignupForm()
+        return render(request, "second/signup.html", {
+            'form': form
+        })
+    elif request.method == 'POST':
+        form = SignupForm(requestd.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            return render(request, "second/signup.html", {
+                'form': form
+            })
+
+def signin(request):
+    
+    if request.method == 'GET':
+        form = LoginForm()
+        return render(request, "second/login.html", {
+            'form': form
+        })
+    elif request.method == 'POST':
+        form = LoginForm(request, request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect("second:index")
+        else:
+            return render(request, "second/login.html", {
+                'form': form
+             })
+
+def logout_view(request):
+    logout(request)
+    return redirect("second:index")

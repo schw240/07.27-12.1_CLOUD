@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +14,7 @@
         }
         html, body {
             height: 100%;
+            min-width: 1200px;
             background-color: #f5f5fb;
         }
         ul {
@@ -32,6 +35,12 @@
             font-size: 20px;
             text-align: center;
         }
+
+        .menu_logo {
+            margin-right: 10px;
+            text-align: center;
+        }
+
         #menu ul {
             margin-top: 40px;
         }
@@ -170,9 +179,9 @@
     <div id="menu">
         <div id="logo">Todo&Favorite</div>
         <ul>
-            <li><a href="{% url 'second:index' %}">Home</a></li>
-            <li><a href="{% url 'second:favourite' %}">Favorite</a></li>
-            <li><a href="{% url 'second:todo' %}">Todo</a></li>
+            <li><img class="menu_logo" src="{% static 'second/icon_home.png' %}"/><a href="{% url 'second:index' %}">Home</a></li>
+            <li><img class="menu_logo" src="{% static 'second/icon_favorite.png' %}"/><a href="{% url 'second:favourite' %}">Favorite</a></li>
+            <li><img class="menu_logo" src="{% static 'second/icon_todo.png' %}"/><a href="{% url 'second:todo' %}">Todo</a></li>
         </ul>
     </div>
     <div id="content">

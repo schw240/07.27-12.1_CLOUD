@@ -6,4 +6,6 @@ Todo&Favorite
 {% endblock %}
 
 {% block content %}
+    {{ request.user.is_authenticated }}
+    {{ request.user.username }}
 {% endblock %}
