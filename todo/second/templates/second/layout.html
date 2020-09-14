@@ -172,6 +172,16 @@
         .popup div {
             background-color:gray;
         }
+
+        .login {
+            margin-left: 1070px;
+        }
+
+        .login div {
+            float: right;
+            margin-top: 30px;
+            margin-left: 5px;
+        }
         
     </style>
 </head>
@@ -185,8 +195,14 @@
         </ul>
     </div>
     <div id="content">
-        {% block content %}
-        {% endblock %}
-    </div>
+    {% block content %}
+        <div class="login">
+            {% if request.user.is_authenticated %}
+                {{ request.user.username }}
+            {% else %}
+                <a href="{% url 'second:signup' %}">회원가입</a>
+                <a href="{% url 'second:signin' %}">로그인</a>
+            {% endif %}
+    {% endblock %}
 </body>
 </html>

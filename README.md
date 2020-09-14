@@ -283,4 +283,5 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 - 실습(로그인 기능 + 업로드 기능 추가하기)
 - 자바스크립트 활용해서 기능 추가하기(도전)
 
-2) 리액트
+### 33일차
+1) 장고 Restful API

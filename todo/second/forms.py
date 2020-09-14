@@ -31,6 +31,10 @@ class LoginForm(AuthenticationForm):
     class Meta(UserCreationForm.Meta):
         model = User
         fields = ['username', 'password']
+        labels = {
+            'username':'아이디',
+            'password':'비밀번호',
+        }
 
 def min_length_3(value):
     if len(value) < 3:

@@ -10,8 +10,8 @@ from .forms import FavouriteModelForm, TodoModelForm, SignupForm, LoginForm
 
 # Create your views here.
 def index(request):
-    print(request.user.is_authenticated)
-    print(request.user)    
+    # print(request.user.is_authenticated)
+    # print(request.user)    
     return render(request, "second/index.html")
 
 @login_required
