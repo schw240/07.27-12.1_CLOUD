@@ -292,3 +292,7 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 ### 35일차
 1) 정규 표현식
 2) 장고 serialize 이론 + 실습
+
+### 36일차
+1) 장고 jwt 이용한 보안기능
+2) 리액트
