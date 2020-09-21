@@ -300,3 +300,7 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 ### 37일차
 1) 리액트 이론(컴포넌트 , 상태값 ,속성값, 이벤트)
 2) 바닐라 JS
+
+### 38일차
+1) 리액트(속성값 , 이벤트 , useEffect , CSS) + 실습 - React 레포지토리에 저장(Github 연습)
+
