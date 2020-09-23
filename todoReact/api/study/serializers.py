@@ -102,7 +102,7 @@ class ScoreSerializer(ModelSerializer):
 
     class Meta:
         model = Scores
-        fields = ['name','math','science','english','reg_user','username','email','phone_number']
+        fields = '__all__'
 
     # def validate_name(self, value):
     #     #정규표현식, 숫자체크
