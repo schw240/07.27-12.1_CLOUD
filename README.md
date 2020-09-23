@@ -304,8 +304,11 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 ### 38일차
 1) 리액트(속성값 , 이벤트 , useEffect , CSS) + 실습 - React 레포지토리에 저장(Github 연습)
 
+<<<<<<< HEAD
 ### 39일차
 1) 리액트 (useReducer, Context API, HTTP axios with 장고)
 
 ### 40일차
 1) 리액트 (Axios이용한 장고에서 만들었던 데이터 가지고오기)
+=======
+>>>>>>> e0a966918a8177f41ee52591f248ba8a3a68ba9e
