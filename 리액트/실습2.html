@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Vanilla JS</title>
+    <script>
+
+        window.onload = () => {
+            let click = document.querySelector("#click");
+            click.onclick = () => {
+                let num = document.querySelector("#count").innerHTML;
+                document.querySelector("#count").innerHTML = Number(num) + 1;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="root">
+        현재 숫자는? <span id="count">0</span>
+        <div id="click">클릭</div>
+    </div>
+</body>
+</html>
