@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = [[10,20], [30,40], [50,60]]
+            let b = [[2,3], [4,5], [6,7]]
+            let c = []
+            
+            row_a = a.length;
+            col_a = a[0].length;
+            col_b = b[0].length;
+
+            console.log(row_a , col_a, col_b)
+
+            for (var s = 0; s < row_a; s++) {
+                c.push([]);
+                for (var x = 0; x < col_a; x++) {
+                c[s].push(0);
+                }
+            }
+
+            for (var i = 0; i < row_a; i++) {
+                for (var j =0; j < col_a; j++) {
+                    c[i][j] = a[i][j] * b[i][j];
+                }
+            }
+
+            console.log(c)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

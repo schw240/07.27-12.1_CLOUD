@@ -307,7 +307,7 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 ### 39일차
 1) 리액트 (useReducer, Context API, HTTP axios with 장고)
 
-### 40일차
+### 40일차 ~ 44일차 (리액트와 장고 활용 개인 프로젝트)
 1) 리액트 (Axios이용한 장고에서 만들었던 데이터 가지고오기)
 2) 개인 프로젝트 시작 (장고 DRF와 React JS, Antd를 활용한 회원별 할일, 즐겨찾기 관리 프로그램)
 
@@ -316,3 +316,9 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 - 2단계 : 리액트와 리액트의 Router 기능을 활용하여 화면 구성 (Antd 활용해보기)
 
 - 3단계 : 즐겨찾기 메뉴와 할일 조회기능 완성
+
+- 4단계 : Antd를 활용하여 Modal을 만들고 추가 기능 구현
+
+- 5단계 : Modal을 이용한 삭제기능 추가 구현
+
+- 6단계 : 로그인 화면 + 기능 구현
