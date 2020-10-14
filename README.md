@@ -341,3 +341,8 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 1) 머신러닝에 사용하는 파이썬 문법
 
 2) Numpy , pandas, pickle(파일 열고 닫기), sklearn기초
+
+### 50일차
+1) Pandas DataFrame처리, NaN 처리
+
+2) 머신러닝이란? + Linear Regression
