@@ -346,3 +346,14 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 1) Pandas DataFrame처리, NaN 처리
 
 2) 머신러닝이란? + Linear Regression
+
+### 51일차
+1) Pandas 데이터프레임 합치기
+
+2) Matplotlib 이용해 그래프그리기
+
+3) Seaborn을 이용하여 그래프 더 이쁘게 그리기
+
+4) Linear Regression 실습
+
+5) Folium을 이용하여 지도에 마커 , 아이콘 남기기
