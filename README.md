@@ -357,3 +357,12 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 4) Linear Regression 실습
 
 5) Folium을 이용하여 지도에 마커 , 아이콘 남기기
+
+### 52일차
+1) 다양한 데이터를 활용해 Linear Regression 실습
+
+2) Cross Validation이용해보기
+
+3) 머신러닝을 위한 통계학
+
+4) Logistic Regression
