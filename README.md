@@ -366,3 +366,12 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 3) 머신러닝을 위한 통계학
 
 4) Logistic Regression
+
+### 53일차
+1) KNN
+
+2) SVM
+
+3) GridSearch
+
+4) 실습을 통한 KNN, SVM, GridSearch비교
