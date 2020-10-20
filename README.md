@@ -375,3 +375,6 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 3) GridSearch
 
 4) 실습을 통한 KNN, SVM, GridSearch비교
+
+### 54일차
+1) Decision Tree
