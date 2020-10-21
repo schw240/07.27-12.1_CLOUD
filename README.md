@@ -384,3 +384,8 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 3) Encoding + Pipeline 기법
 
 4) 타이타닉 생존율 예측하기(Features Engineering)
+
+### 55일차
+1) 타이타닉
+
+2) Cluster K-Mean and DBSCAN
