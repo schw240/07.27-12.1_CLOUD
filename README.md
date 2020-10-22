@@ -389,3 +389,12 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 1) 타이타닉
 
 2) Cluster K-Mean and DBSCAN
+
+### 56일차
+1) outlier 발견하기
+
+2) 데이터 주성분분석(PCA)
+
+3) MLP방법으로 이미지 인식
+
+4) VGG16 모델로 이미지 분류
