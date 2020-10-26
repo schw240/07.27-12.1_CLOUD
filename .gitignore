@@ -2,3 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+
+머신러닝을 위한 파이썬 문법/실습데이터/sports
+머신러닝을 위한 파이썬 문법/실습데이터/basketball.jpg
+머신러닝을 위한 파이썬 문법/classify sports.h5
+.h5
+머신러닝을 위한 파이썬 문법/detecting_mask_or_nomask.h5
+.gitignore
