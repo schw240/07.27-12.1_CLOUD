@@ -407,3 +407,8 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 ### 58일차
 1) CNN실습 야구, 볼링, 농구, 축구 이미지를 모아서 모델을 만들고
 예측해보기
+
+### 59일차
+1) style transfer
+
+2) colab 사용해보기
