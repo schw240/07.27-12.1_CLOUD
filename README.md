@@ -412,3 +412,7 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 1) style transfer
 
 2) colab 사용해보기
+
+### 60일차
+팀프로젝트 시작
+1) 1일차 - 팀별 회의 및 주제 그리고 역할 정하기
