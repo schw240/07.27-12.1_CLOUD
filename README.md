@@ -424,3 +424,9 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
       - 정규화
       - LSTM modeling
       - 크롤링코딩 보조
+
+### 62일차
+팀프로젝트
+3일차 - 학습완료, 결과 확인
+      - XGBoost모델로도 확인해보기
+      - 크롤링 코딩 보조(마이뱅크 사이트 크롤링 완료)
