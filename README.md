@@ -449,5 +449,7 @@ EDA [사진.zip](https://github.com/schw240/07.27-12.1_CLOUD/files/5062781/defau
 
 ### 68일차
 아마존 aws에 RDS(MySql)구축 및 연동
-데이터 이전
 프론트 구축 시작
+
+### 69일차
+프론트 구축 - 2일차
